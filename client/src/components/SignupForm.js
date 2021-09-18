@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-import ADD_USER from '../utils/queries';
+import { ADD_USER } from '../utils/mutations';
 // import { createUser } from '../utils/API';
 import Auth from '../utils/auth';
+import { useMutation } from '@apollo/client';
 
-const [ createUser, {error}] = useQuery(ADD_USER);
+
+// const { loading, error, data } = useQuery(ADD_USER);
+// eslint-disable-next-line
+const [createUser, {error}] = useMutation(ADD_USER);
 
 const SignupForm = () => {
   // set initial form state
