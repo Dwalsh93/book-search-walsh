@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-
-import { createUser } from '../utils/API';
+import ADD_USER from '../utils/queries';
+// import { createUser } from '../utils/API';
 import Auth from '../utils/auth';
+
+const [ createUser, {error}] = useQuery(ADD_USER);
 
 const SignupForm = () => {
   // set initial form state
