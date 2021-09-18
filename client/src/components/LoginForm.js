@@ -7,10 +7,9 @@ import Auth from '../utils/auth';
 import { useMutation } from '@apollo/client';
 
 // const [ loginUser, {error} ] = useQuery(LOGIN_USER);
-// eslint-disable-next-line
-const [ loginUser, {error}] = useMutation(LOGIN_USER);
 
 const LoginForm = () => {
+  const [ loginUser, {error}] = useMutation(LOGIN_USER);
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
